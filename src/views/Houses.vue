@@ -1,6 +1,5 @@
 <template>
-  <transition name="fade" appear>
-    <div>
+  <div>
     <h2>Our Houses</h2>
     <ul class="galery-house">
       <li class="galery-house-item" v-for="house in houses.houses" :key="house.name">
@@ -10,8 +9,7 @@
       </li>
     </ul>
     <Footer />
-    </div>
-  </transition>
+  </div>
 </template>
 
 <script>
