@@ -20,6 +20,11 @@ html {
   text-decoration: none;
 }
 
+#app {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
 /* TRANSITIONS */
 .fade-enter {
   opacity: 0;

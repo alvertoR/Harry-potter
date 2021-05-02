@@ -16,39 +16,37 @@
             <p class="section-order-title">Order</p>
             <img src="@/assets/icons/arrow-down.svg" alt="arrow-down">
         </div>
-        <transition name="fade">
-            <div v-if="order === true" class="order">
-            <label 
-                
-                for="name" 
-                class="order-radio">
-                <input 
-                type="radio" 
-                name="order" 
-                id="name" 
-                value="name"
-                @click="sortMembers($event)"
-                class="order-radio__input" />
-                By name
-                <div 
-                class="order-radio__radio"></div>
-            </label>
-            <label 
-                for="last-name" 
-                class="order-radio">
-                <input 
-                @click="sortMembers($event)"
-                type="radio" 
-                name="order" 
-                id="last-name" 
-                value="last-name"
-                class="order-radio__input" />
-                By last name
-                <div 
-                class="order-radio__radio"></div>
-            </label>
-            </div>
-        </transition>
+        <div v-if="order === true" class="order">
+        <label 
+            
+            for="name" 
+            class="order-radio">
+            <input 
+            type="radio" 
+            name="order" 
+            id="name" 
+            value="name"
+            @click="sortMembers($event)"
+            class="order-radio__input" />
+            By name
+            <div 
+            class="order-radio__radio"></div>
+        </label>
+        <label 
+            for="last-name" 
+            class="order-radio">
+            <input 
+            @click="sortMembers($event)"
+            type="radio" 
+            name="order" 
+            id="last-name" 
+            value="last-name"
+            class="order-radio__input" />
+            By last name
+            <div 
+            class="order-radio__radio"></div>
+        </label>
+        </div>
         <ul class="galery">
             <li 
             class="galery-member"
