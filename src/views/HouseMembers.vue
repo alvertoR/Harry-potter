@@ -96,8 +96,13 @@ export default {
         })
     },  
     methods: {
-      getHouse(){
-        this.$store.dispatch('houses/getHouseMembers', `${this.namehouse}`);
+      async getHouse(){
+        const house = await this.$store.dispatch('houses/getHouseMembers', `${this.namehouse}`);
+        console.log(house);
+        if(house.data.length === 0){
+            this.$router.push({ name: "error-page" });
+        }
+        
       },
       sortMembers(element){
           const orderBy = element.target.value;
